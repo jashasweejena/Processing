@@ -5,7 +5,7 @@ double finalPi = 0;
 
 void setup(){
   size(405, 405);
-    background(0);
+  background(0);
   translate(width/2, height/2);
   
   stroke(255);
@@ -26,8 +26,7 @@ void draw() {
   totalPoints++;
   
   double pi;
-  
-  double distance = ((double)x * (double)x + (double)y *y);
+  double distance = ((double)x * (double)x + (double)y * (double)y);
   if(distance < (double)r * (double)r){
     
     circlePoints++;
@@ -39,18 +38,18 @@ void draw() {
     stroke(255, 255, 255, 100);
   }
   
-    strokeWeight(1);
-    point(x, y);
-      pi = 4 * (float)(circlePoints / totalPoints);
-      double diff = Math.abs(Math.PI - pi);
-      double finalDiff = Math.abs(Math.PI - finalPi);
-      if(diff < finalDiff) {
-      
-        finalPi = pi;
-        finalDiff = diff;
-        println(finalPi);
+  strokeWeight(1);
+  point(x, y);
+  pi = 4 * (float)(circlePoints / totalPoints);
+  double diff = Math.abs(Math.PI - pi);
+  double finalDiff = Math.abs(Math.PI - finalPi);
+  if(diff < finalDiff) {
 
-      }
+    finalPi = pi;
+    finalDiff = diff;
+    println(finalPi);
+
+    }
 
   }
 }
